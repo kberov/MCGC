@@ -4,93 +4,91 @@ use 5.10.1;
 use strict;
 use warnings FATAL => 'all';
 
-=head1 NAME
-
-Mojolicious::Command::generate::command - The great new Mojolicious::Command::generate::command!
-
-=head1 VERSION
-
-Version 0.01
-
-=cut
 
 our $VERSION = '0.01';
+1; # End of Mojolicious::Command::generate::command
+
+=encoding utf8
+
+=head1 NAME
+
+Mojolicious::Command::generate::command - Generate your own commands!
 
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
+  #programatically
+  use Mojolicious::Command::generate::command;
+  Mojolicious::Command::generate::command->run(@ARGV);
+  #or
+  Mojolicious::Command::generate::command->run(%opts);
+  
+  #on the command line use mojo or your app
+  :$ myapp generate command --name=MyApp::Command::foo \
+  --generate-namespace --subcommands=dothis,dothat,dosomethingelse \
+  --lib_root ./lib
 
-Perhaps a little code snippet.
+=head1 DESCRIPTION
 
-    use Mojolicious::Command::generate::command;
+This command automates the generation of other commands.
+It prepares a boilerplate module but without all the goodnes 
+of L<Module::Starter>. It is suitable for use within your own 
+Mojolicious application or framework.
+You can also install your commands in a custom namespace.
 
-    my $foo = Mojolicious::Command::generate::command->new();
-    ...
 
-=head1 EXPORT
+=head1 ATTRIBUTES
 
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
+This module implements the following attributes
+
+=head2 usage
+
+Short usage message for the commandline.
+
+=head2 description
+
+Short description for the mojo help on the command line.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 function1
 
-=cut
 
-sub function1 {
-}
-
-=head2 function2
-
-=cut
-
-sub function2 {
-}
-
-=head1 AUTHOR
-
-Красимир Беров, C<< <berov at cpan.org> >>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-mojolicious-command-generate-command at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Mojolicious-Command-generate-command>.  I will be notified, and then you'll
+Please report any bugs or feature requests
+on L<https://github.com/kberov/MCGC/issues>
+I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
-
-
-
 
 =head1 SUPPORT
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Mojolicious::Command::generate::command
-
+  perldoc Mojolicious::Command::generate::command
 
 You can also look for information at:
 
-=over 4
-
-=item * RT: CPAN's request tracker (report bugs here)
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Mojolicious-Command-generate-command>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Mojolicious-Command-generate-command>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Mojolicious-Command-generate-command>
+=over
 
 =item * Search CPAN
 
 L<http://search.cpan.org/dist/Mojolicious-Command-generate-command/>
 
+=item * META CPAN
+
+L<https://metacpan.org/module/Mojolicious-Command-generate-command/>
+
 =back
 
+
+=head1 SEE ALSO
+
+ L<Module::Starter>, L<Mojolicious::Command::generate>
+
+=head1 AUTHOR
+
+Красимир Беров, C<< <berov at cpan.org> >>
 
 =head1 ACKNOWLEDGEMENTS
 
@@ -138,4 +136,4 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =cut
 
-1; # End of Mojolicious::Command::generate::command
+

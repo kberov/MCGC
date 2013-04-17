@@ -1,5 +1,9 @@
 Revision history for Mojolicious-Command-generate-command
 
-0.01    Date/time
-        First version, released on an unsuspecting world.
+0.01    2013-04-18 01:20:56 EEST
+        - README contains no boilerplate text.
+        - Changes contains no boilerplate text
+        - lib/Mojolicious/Command/generate/command.pm 
+        contains no boilerplate text
+        - First version, released on an unsuspecting world.
 
