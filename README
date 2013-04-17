@@ -1,25 +1,25 @@
 Mojolicious-Command-generate-command
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
-
-A README file is required for CPAN modules since CPAN extracts the README
-file from a module distribution so that people browsing the archive
-can use it to get an idea of the module's uses. It is usually a good idea
-to provide version information here so that people can decide whether
-fixes for the module are worth downloading.
+This command automates the generation of other commands.
+It prepares a boilerplate module but without all the goodnes 
+of L<Module::Starter>. It is suitable for use within your own 
+Mojolicious application or framework.
+You can also install your commands in a custom namespace.
 
 
 INSTALLATION
 
-To install this module, run the following commands:
+You can always use the cpan shell or cpanm.
+
+  :$ cpanm Mojolicious::Command::generate::command
+
+To install this module manually, run the following commands:
 
 	perl Makefile.PL
 	make
 	make test
 	make install
+
 
 SUPPORT AND DOCUMENTATION
 
@@ -30,8 +30,8 @@ perldoc command.
 
 You can also look for information at:
 
-    RT, CPAN's request tracker (report bugs here)
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Mojolicious-Command-generate-command
+    GitHub tracker (report bugs here)
+        https://github.com/kberov/MCGC/issues
 
     AnnoCPAN, Annotated CPAN documentation
         http://annocpan.org/dist/Mojolicious-Command-generate-command
